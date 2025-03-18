@@ -18,25 +18,28 @@ This project is a web-based **augmented reality (AR) filter system** that activa
 - **PyAudio** (for microphone input handling)  
 - **OpenCV** (for image processing)  
 
-📷 How It Works
+## 📷 How It Works
 Start the app – Your webcam and microphone will activate.
 Perform the "Let’s Go" gesture – The model will detect your hand pose.
 Say "Go" – The speech recognition model will process your voice.
 Transformation Activated! – If both inputs match, the AR filter is applied.
-🎯 Model Training
+
+## 🎯 Model Training
 The gesture recognition model was trained using MediaPipe keypoints stored in keypoint.csv.
 It uses a feedforward neural network with the following structure:
 Input Layer: 42 nodes
 Hidden Layers: 20 and 10 nodes
 Output Layer: 3 nodes (gesture classification)
 The model was trained for 248 epochs and achieved 96% accuracy.
-🔮 Future Improvements
+
+##🔮 Future Improvements
 Add more custom gestures and voice commands.
 Improve model accuracy with a larger dataset.
 Implement an intuitive UI for filter customization.
-📜 License
+
+##📜 License
 This project is licensed under the MIT License.
 
-🤝 Contributing
+##🤝 Contributing
 Pull requests are welcome! Feel free to open an issue for feature requests or bug fixes.
 
