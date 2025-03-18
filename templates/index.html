@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hand Gesture & Voice Recognition</title>
+    <script>
+        function pollSpeechRecognition() {
+            fetch('/speech_to_text', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.text) {
+                    console.log("Recognized: " + data.text);
+                    document.getElementById('speech-text').innerText = "Speech Output: " + data.text;
+                }
+                // Continue polling
+                setTimeout(pollSpeechRecognition, 500);
+            });
+        }
+
+        // Start polling when page loads
+        window.onload = function() {
+            pollSpeechRecognition();
+        };
+    </script>
+</head>
+<body>
+    <h1>Hand Gesture and Voice Recognition</h1>
+    <img src="{{ url_for('video_feed') }}" width="640px">
+
+    <h2>Speech Recognition</h2>
+    <p id="speech-text">Speech Output: </p>
+    <p>Status: Continuously listening...</p>
+</body>
+</html>
