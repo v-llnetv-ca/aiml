@@ -32,14 +32,17 @@ Hidden Layers: 20 and 10 nodes
 Output Layer: 3 nodes (gesture classification)
 The model was trained for 248 epochs and achieved 96% accuracy.
 
-##🔮 Future Improvements
+🔮 Future Improvements
+
 Add more custom gestures and voice commands.
 Improve model accuracy with a larger dataset.
 Implement an intuitive UI for filter customization.
 
-##📜 License
+📜 License
+
 This project is licensed under the MIT License.
 
-##🤝 Contributing
+🤝 Contributing
+
 Pull requests are welcome! Feel free to open an issue for feature requests or bug fixes.
 
